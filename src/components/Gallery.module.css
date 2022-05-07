@@ -5,6 +5,8 @@
   /* grid-auto-columns: min-content; */
   /* grid-auto-rows: 1rem; */
   grid-template-columns: repeat(5, min-content);
+  margin: auto;
+  width: min-content;
 }
 
 .imageContainer {
