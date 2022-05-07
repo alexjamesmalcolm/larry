@@ -1,0 +1,19 @@
+.header {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.navigation {
+}
+.navigation ul {
+  margin: 0;
+  padding: 0;
+}
+.navigation ul li {
+  display: block;
+}
+
+.link {
+}
+.link.active {
+}

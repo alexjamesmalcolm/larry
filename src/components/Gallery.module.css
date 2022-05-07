@@ -9,12 +9,18 @@
   width: min-content;
 }
 
-.imageContainer {
+.galleryContainer {
+}
+.modal {
 }
 
 .name {
 }
 
-.image {
+.galleryContainer .image {
   width: 300px;
+}
+
+.modal .image {
+  height: 80vh;
 }
