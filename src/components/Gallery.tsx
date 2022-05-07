@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { Modal } from "react-bootstrap";
 import styles from "./Gallery.module.css";
 
@@ -14,9 +14,8 @@ const Gallery = ({ content }: { content: Content[] }) => {
   return (
     <div className={styles.container}>
       {content.map(({ id, src, description, name }) => (
-        <>
+        <Fragment key={id}>
           <article
-            key={id}
             className={styles.galleryContainer}
             onClick={() => setActiveImageId(id)}
           >
@@ -34,7 +33,7 @@ const Gallery = ({ content }: { content: Content[] }) => {
               <img src={src} alt={description} className={styles.image} />
             </Modal.Body>
           </Modal>
-        </>
+        </Fragment>
       ))}
     </div>
   );
