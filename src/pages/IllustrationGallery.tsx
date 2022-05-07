@@ -26,16 +26,36 @@ import robot from "../content/illustration/robot.png";
 import selfPortrait from "../content/illustration/self-portrait.png";
 
 const content: Content[] = [
+  { src: coffeeSwim, id: "coffee-swim", name: "Coffee Swim", description: "" },
   {
-    src: angela,
-    id: "angela",
-    name: "Angela",
+    src: redHeadStudent,
+    id: "red-head-student",
+    name: "Red Head Student",
     description: "",
   },
   {
-    src: birdHouse,
-    id: "bird-house",
-    name: "Bird House",
+    src: chemexFlower,
+    id: "chemex-flower",
+    name: "Chemex Flower",
+    description: "",
+  },
+  {
+    src: cheers,
+    id: "cheers",
+    name: "Cheers",
+    description: "",
+  },
+  { src: weirdGuy, id: "weird-guy", name: "Weird Guy", description: "" },
+  {
+    src: guyOnLaptop,
+    id: "guy-on-laptop",
+    name: "Guy on Laptop",
+    description: "",
+  },
+  {
+    src: laptopCoffeeBook,
+    id: "laptop-coffee-book",
+    name: "Laptop Coffee Book",
     description: "",
   },
   {
@@ -51,48 +71,16 @@ const content: Content[] = [
     description: "",
   },
   {
-    src: cheers,
-    id: "cheers",
-    name: "Cheers",
-    description: "",
-  },
-  {
-    src: chemexFlower,
-    id: "chemex-flower",
-    name: "Chemex Flower",
-    description: "",
-  },
-  {
-    src: cocktail,
-    id: "cocktail",
-    name: "Cocktail",
-    description: "",
-  },
-  { src: coffeeSwim, id: "coffee-swim", name: "Coffee Swim", description: "" },
-  { src: drinks, id: "drinks", name: "Drinks", description: "" },
-  {
     src: fourCubePeople,
     id: "four-cube-people",
     name: "Four Cube People",
     description: "",
   },
+  { src: hannah, id: "hannah", name: "Hannah", description: "" },
   {
     src: goofyGuy,
     id: "goofy-guy",
     name: "Goofy Guy",
-    description: "",
-  },
-  {
-    src: guyOnLaptop,
-    id: "guy-on-laptop",
-    name: "Guy on Laptop",
-    description: "",
-  },
-  { src: hannah, id: "hannah", name: "Hannah", description: "" },
-  {
-    src: laptopCoffeeBook,
-    id: "laptop-coffee-book",
-    name: "Laptop Coffee Book",
     description: "",
   },
   {
@@ -101,19 +89,6 @@ const content: Content[] = [
     name: "Larry Circle",
     description: "",
   },
-  {
-    src: larryProfile,
-    id: "larry-profile",
-    name: "Larry Profile",
-    description: "",
-  },
-  {
-    src: redHeadStudent,
-    id: "red-head-student",
-    name: "Red Head Student",
-    description: "",
-  },
-  { src: sadWoman, id: "saw-woman", name: "Sad Woman", description: "" },
   { src: sabrina, id: "sabrina", name: "Sabrina", description: "" },
   {
     src: sicquanBand,
@@ -121,8 +96,20 @@ const content: Content[] = [
     name: "Sicquan Band",
     description: "",
   },
-  { src: stuck, id: "stuck", name: "Stuck", description: "" },
-  { src: weirdGuy, id: "weird-guy", name: "Weird Guy", description: "" },
+  { src: drinks, id: "drinks", name: "Drinks", description: "" },
+  {
+    src: cocktail,
+    id: "cocktail",
+    name: "Cocktail",
+    description: "",
+  },
+  {
+    src: larryProfile,
+    id: "larry-profile",
+    name: "Larry Profile",
+    description: "",
+  },
+  { src: sadWoman, id: "saw-woman", name: "Sad Woman", description: "" },
   { src: robot, id: "robot", name: "Robot", description: "" },
   {
     src: selfPortrait,
@@ -130,6 +117,19 @@ const content: Content[] = [
     name: "Self Portrait",
     description: "",
   },
+  {
+    src: angela,
+    id: "angela",
+    name: "Angela",
+    description: "",
+  },
+  {
+    src: birdHouse,
+    id: "bird-house",
+    name: "Bird House",
+    description: "",
+  },
+  { src: stuck, id: "stuck", name: "Stuck", description: "" },
 ];
 
 const IllustrationGallery = () => <Gallery content={content} />;
