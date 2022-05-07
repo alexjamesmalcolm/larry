@@ -1,13 +1,17 @@
 .header {
   display: grid;
-  grid-auto-flow: column;
+  margin: 0 2rem;
+  grid-template-columns: max-content auto max-content 2rem max-content 2rem max-content 4rem max-content 2rem max-content;
+  align-items: center;
 }
 
 .navigation {
+  display: contents;
 }
 .navigation ul {
   margin: 0;
   padding: 0;
+  display: contents;
 }
 .navigation ul li {
   display: block;
