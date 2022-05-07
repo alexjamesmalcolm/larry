@@ -22,6 +22,8 @@ import sabrina from "../content/illustration/sabrina.jpg";
 import sicquanBand from "../content/illustration/sicquan-band.jpg";
 import stuck from "../content/illustration/stuck.png";
 import weirdGuy from "../content/illustration/weird-guy.jpg";
+import robot from "../content/illustration/robot.png";
+import selfPortrait from "../content/illustration/self-portrait.png";
 
 const content: Content[] = [
   {
@@ -121,6 +123,13 @@ const content: Content[] = [
   },
   { src: stuck, id: "stuck", name: "Stuck", description: "" },
   { src: weirdGuy, id: "weird-guy", name: "Weird Guy", description: "" },
+  { src: robot, id: "robot", name: "Robot", description: "" },
+  {
+    src: selfPortrait,
+    id: "self-portrait",
+    name: "Self Portrait",
+    description: "",
+  },
 ];
 
 const IllustrationGallery = () => <Gallery content={content} />;
