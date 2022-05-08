@@ -1,6 +1,7 @@
-import { Fragment, useState } from "react";
-import { Modal } from "react-bootstrap";
+import { Fragment, useCallback, useMemo, useState } from "react";
+import { Button, Modal } from "react-bootstrap";
 import styles from "./Gallery.module.css";
+// import arrow from "../images/right-arrow.svg";
 
 export interface Content {
   src: string;
@@ -11,6 +12,32 @@ export interface Content {
 
 const Gallery = ({ content }: { content: Content[] }) => {
   const [activeImageId, setActiveImageId] = useState<Content["id"]>();
+  const close = useCallback(() => setActiveImageId(undefined), []);
+  const lastContentIndex = useMemo(() => content.length - 1, [content.length]);
+  const previous = useCallback(() => {
+    const currentContentIndex = content.findIndex(
+      ({ id }) => id === activeImageId
+    );
+    if (currentContentIndex === undefined) {
+      close();
+    } else if (currentContentIndex === 0) {
+      setActiveImageId(content[lastContentIndex].id);
+    } else {
+      setActiveImageId(content[currentContentIndex - 1].id);
+    }
+  }, [activeImageId, close, content, lastContentIndex]);
+  const next = useCallback(() => {
+    const currentContentIndex = content.findIndex(
+      ({ id }) => id === activeImageId
+    );
+    if (currentContentIndex === undefined) {
+      close();
+    } else if (currentContentIndex === lastContentIndex) {
+      setActiveImageId(content[0].id);
+    } else {
+      setActiveImageId(content[currentContentIndex + 1].id);
+    }
+  }, [activeImageId, close, content, lastContentIndex]);
   return (
     <div className={styles.container}>
       {content.map(({ id, src, description, name }) => (
@@ -25,12 +52,18 @@ const Gallery = ({ content }: { content: Content[] }) => {
           <Modal
             show={activeImageId === id}
             size="xl"
-            onHide={() => setActiveImageId(undefined)}
+            onHide={close}
             className={styles.modal}
+            fullscreen
           >
             <Modal.Body className={styles.body}>
               <img src={src} alt={description} className={styles.image} />
             </Modal.Body>
+            <Modal.Footer>
+              <Button onClick={close}>Close</Button>
+              <Button onClick={previous}>Previous</Button>
+              <Button onClick={next}>Next</Button>
+            </Modal.Footer>
           </Modal>
         </Fragment>
       ))}
