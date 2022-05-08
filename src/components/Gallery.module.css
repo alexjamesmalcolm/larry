@@ -6,6 +6,30 @@
   width: min-content;
 }
 
+@media (max-width: 1600px) {
+  .container {
+    grid-template-columns: repeat(4, min-content);
+  }
+}
+
+@media (max-width: 1300px) {
+  .container {
+    grid-template-columns: repeat(3, min-content);
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    grid-template-columns: repeat(2, min-content);
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    grid-template-columns: repeat(1, min-content);
+  }
+}
+
 .name {
   text-align: center;
 }
