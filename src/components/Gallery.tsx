@@ -1,7 +1,7 @@
 import { Fragment, useCallback, useMemo, useState } from "react";
-import { Button, Modal } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 import styles from "./Gallery.module.css";
-// import arrow from "../images/right-arrow.svg";
 
 export interface Content {
   src: string;
