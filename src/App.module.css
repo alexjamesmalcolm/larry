@@ -18,6 +18,14 @@
 }
 
 .link {
+  color: rgb(71, 81, 91);
+  text-decoration: none;
+  display: inline;
 }
 .link.active {
+  text-decoration: underline;
+}
+
+.linkedin {
+  margin-top: -4px;
 }
