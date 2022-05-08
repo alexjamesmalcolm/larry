@@ -28,8 +28,7 @@ const Gallery = ({ content }: { content: Content[] }) => {
             onHide={() => setActiveImageId(undefined)}
             className={styles.modal}
           >
-            <Modal.Header>Hi</Modal.Header>
-            <Modal.Body>
+            <Modal.Body className={styles.body}>
               <img src={src} alt={description} className={styles.image} />
             </Modal.Body>
           </Modal>
