@@ -4,10 +4,18 @@ import Modal from "react-bootstrap/Modal";
 import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./Gallery.module.css";
 import ISwiper, { Navigation, Pagination, Keyboard, Mousewheel } from "swiper";
+import { SwiperModule } from "swiper/types";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
+const swiperModules: SwiperModule[] = [
+  Navigation,
+  Pagination,
+  Keyboard,
+  Mousewheel,
+];
 
 export interface Content {
   src: string;
@@ -61,7 +69,7 @@ const Gallery = ({ content }: { content: Content[] }) => {
             pagination
             keyboard
             mousewheel
-            modules={[Navigation, Pagination, Keyboard, Mousewheel]}
+            modules={swiperModules}
           >
             {content.map(({ description, id, src }) => (
               <SwiperSlide key={id} className={styles.slide}>
