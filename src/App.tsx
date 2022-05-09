@@ -6,6 +6,7 @@ import classNames from "classnames";
 import { useCallback } from "react";
 import instagram from "./images/instagram.svg";
 import linkedin from "./images/linkedin.svg";
+import About from "./pages/About";
 
 const App = () => {
   const navLinkClassName = useCallback<
@@ -66,6 +67,7 @@ const App = () => {
       <Routes>
         <Route index element={<IllustrationGallery />} />
         <Route path="/graphic-design" element={<GraphicDesignGallery />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </div>
   );
