@@ -1,4 +1,4 @@
-import { Fragment, useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -41,14 +41,13 @@ const Gallery = ({ content }: { content: Content[] }) => {
     <>
       <div className={styles.container}>
         {content.map(({ id, src, description }, index) => (
-          <Fragment key={id}>
-            <article
-              className={styles.galleryContainer}
-              onClick={() => setActiveImageIndex(index)}
-            >
-              <img className={styles.image} src={src} alt={description} />
-            </article>
-          </Fragment>
+          <article
+            key={id}
+            className={styles.galleryContainer}
+            onClick={() => setActiveImageIndex(index)}
+          >
+            <img className={styles.image} src={src} alt={description} />
+          </article>
         ))}
       </div>
       <Modal
