@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./Gallery.module.css";
 import ISwiper, { Navigation, Pagination, Keyboard, Mousewheel } from "swiper";
 import { SwiperModule } from "swiper/types";
+import { useMediaQuery } from "react-responsive";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -29,6 +30,7 @@ const Gallery = ({ content }: { content: Content[] }) => {
     undefined
   );
   const close = useCallback(() => setActiveImageIndex(undefined), []);
+  const isSingleColumn = useMediaQuery({ maxWidth: "700px" });
   const onSwiperCreation = useCallback(
     (swiper: ISwiper) => {
       if (activeImageIndex) {
@@ -69,6 +71,8 @@ const Gallery = ({ content }: { content: Content[] }) => {
             keyboard
             mousewheel
             modules={swiperModules}
+            edgeSwipeDetection="prevent"
+            direction={isSingleColumn ? "vertical" : "horizontal"}
           >
             {content.map(({ description, id, src }) => (
               <SwiperSlide key={id} className={styles.slide}>
