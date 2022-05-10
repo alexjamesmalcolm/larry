@@ -18,25 +18,25 @@ const App = () => {
   return (
     <div>
       <header className={styles.header}>
-        <h1>Larry Mitchell</h1>
+        <h1 id={styles.larryMitchell}>Larry Mitchell</h1>
         <nav className={styles.navigation}>
           <ul>
-            <li style={{ gridColumn: "3" }}>
+            <li id={styles.illustrations}>
               <NavLink to="/" className={navLinkClassName}>
                 Illustrations
               </NavLink>
             </li>
-            <li style={{ gridColumn: "5" }}>
+            <li id={styles.graphicDesign}>
               <NavLink to="graphic-design" className={navLinkClassName}>
                 Graphic Design
               </NavLink>
             </li>
-            <li style={{ gridColumn: "7" }}>
+            <li id={styles.about}>
               <NavLink to="about" className={navLinkClassName}>
                 About
               </NavLink>
             </li>
-            <li style={{ gridColumn: "9" }}>
+            <li id={styles.instagram}>
               <a
                 href="https://www.instagram.com/larry.mitchell/"
                 target="_blank"
@@ -46,19 +46,14 @@ const App = () => {
                 <img src={instagram} alt="Instagram" />
               </a>
             </li>
-            <li style={{ gridColumn: "11" }}>
+            <li id={styles.linkedin}>
               <a
                 href="https://www.linkedin.com/in/lawrence-mitchell-a89313102/"
                 target="_blank"
                 rel="noreferrer"
                 className={styles.link}
               >
-                <img
-                  height="20px"
-                  className={styles.linkedin}
-                  src={linkedin}
-                  alt="LinkedIn"
-                />
+                <img height="20px" src={linkedin} alt="LinkedIn" />
               </a>
             </li>
           </ul>
