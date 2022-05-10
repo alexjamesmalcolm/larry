@@ -31,6 +31,7 @@ const Gallery = ({ content }: { content: Content[] }) => {
   );
   const close = useCallback(() => setActiveImageIndex(undefined), []);
   const isSingleColumn = useMediaQuery({ maxWidth: "700px" });
+  const deviceHasFinePointer = useMediaQuery({ query: "(pointer: fine)" });
   const onSwiperCreation = useCallback(
     (swiper: ISwiper) => {
       if (activeImageIndex) {
@@ -65,7 +66,7 @@ const Gallery = ({ content }: { content: Content[] }) => {
         <Modal.Body className={styles.body}>
           <Swiper
             onSwiper={onSwiperCreation}
-            navigation
+            navigation={deviceHasFinePointer}
             rewind
             pagination
             keyboard
