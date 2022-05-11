@@ -48,7 +48,12 @@ const Gallery = ({ content }: { content: Content[] }) => {
             className={styles.galleryContainer}
             onClick={() => setActiveImageIndex(index)}
           >
-            <img className={styles.image} src={src} alt={description} />
+            <img
+              className={styles.image}
+              src={src}
+              alt={description}
+              loading={index > 7 ? "lazy" : "eager"}
+            />
           </article>
         ))}
       </div>
