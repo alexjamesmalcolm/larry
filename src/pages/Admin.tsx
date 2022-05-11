@@ -1,17 +1,16 @@
-import { Authenticator, Button } from "@aws-amplify/ui-react";
+import { Button } from "@aws-amplify/ui-react";
+import withAuthenticator, {
+  AuthenticatorProps,
+} from "../components/withAuthenticator";
 
-const Admin = () => (
-  <Authenticator>
-    {({ user, signOut }) => {
-      const email = user?.attributes?.email;
-      return (
-        <div>
-          <p>Hello {email}</p>
-          <Button onClick={signOut}>Sign Out</Button>
-        </div>
-      );
-    }}
-  </Authenticator>
-);
+const Admin = ({ signOut, user }: AuthenticatorProps): JSX.Element => {
+  const email = user?.attributes?.email;
+  return (
+    <div>
+      <p>Hello {email}</p>
+      <Button onClick={signOut}>Sign Out</Button>
+    </div>
+  );
+};
 
-export default Admin;
+export default withAuthenticator(Admin);
