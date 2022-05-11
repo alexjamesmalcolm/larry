@@ -22,7 +22,6 @@ export interface Content {
   src: string;
   id: string;
   description: string;
-  name: string;
 }
 
 const Gallery = ({ content }: { content: Content[] }) => {

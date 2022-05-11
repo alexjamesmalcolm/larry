@@ -9,28 +9,28 @@ import editorial from "../content/graphic-design/editorial.png";
 import poster from "../content/graphic-design/poster.png";
 
 const content: Content[] = [
-  { id: "greenery", src: greenery, description: "", name: "Greenery" },
-  { id: "aranciata", src: aranciata, description: "", name: "Aranciata" },
+  { id: "greenery", src: greenery, description: "Greenery" },
+  { id: "aranciata", src: aranciata, description: "Aranciata" },
   {
     id: "colorPairings",
     src: colorPairings,
-    description: "",
-    name: "Color Pairings",
+
+    description: "Color Pairings",
   },
   {
     id: "every-day-is-ice-cream-day",
     src: everyDayIsIceCreamDay,
-    description: "",
-    name: "Every Day is Ice Cream Day",
+
+    description: "Every Day is Ice Cream Day",
   },
   {
     id: "i-know-the-end",
     src: iKnowTheEnd,
-    description: "",
-    name: "I Know The End",
+
+    description: "I Know The End",
   },
-  { id: "editorial", src: editorial, description: "", name: "Editorial" },
-  { id: "poster", src: poster, description: "", name: "Poster" },
+  { id: "editorial", src: editorial, description: "Editorial" },
+  { id: "poster", src: poster, description: "Poster" },
 ];
 
 const GraphicDesignGallery = () => <Gallery content={content} />;
