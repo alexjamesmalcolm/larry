@@ -40,6 +40,13 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
+                "isDeleted": {
+                    "name": "isDeleted",
+                    "isArray": false,
+                    "type": "Boolean",
+                    "isRequired": false,
+                    "attributes": []
+                },
                 "createdAt": {
                     "name": "createdAt",
                     "isArray": false,
@@ -71,10 +78,21 @@ export const schema = {
                             {
                                 "allow": "public",
                                 "operations": [
+                                    "read"
+                                ]
+                            },
+                            {
+                                "groupClaim": "cognito:groups",
+                                "provider": "userPools",
+                                "allow": "groups",
+                                "groups": [
+                                    "admin"
+                                ],
+                                "operations": [
+                                    "read",
                                     "create",
                                     "update",
-                                    "delete",
-                                    "read"
+                                    "delete"
                                 ]
                             }
                         ]
@@ -93,5 +111,5 @@ export const schema = {
         }
     },
     "nonModels": {},
-    "version": "eec4688a754f3c8385d41bc6bb9bd776"
+    "version": "c3dfe305591fb5d7f599678f05989736"
 };

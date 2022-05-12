@@ -17,6 +17,7 @@ export declare class Image {
   readonly type: ImageType | keyof typeof ImageType;
   readonly description: string;
   readonly order: number;
+  readonly isDeleted?: boolean | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
   constructor(init: ModelInit<Image, ImageMetaData>);
