@@ -2,6 +2,7 @@
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(var(--column-count), min-content);
+  grid-auto-rows: 389px;
   --column-count: 5;
   margin: auto;
   width: min-content;
