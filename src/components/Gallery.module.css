@@ -1,21 +1,21 @@
 .container {
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
   grid-template-columns: repeat(var(--column-count), min-content);
-  --column-count: 5;
+  --column-count: 4;
   margin: auto;
   width: min-content;
 }
 
 @media (max-width: 1600px) {
   .container {
-    --column-count: 4;
+    --column-count: 3;
   }
 }
 
 @media (max-width: 1300px) {
   .container {
-    --column-count: 3;
+    --column-count: 2;
   }
 }
 
@@ -36,7 +36,9 @@
 }
 
 .galleryContainer .image {
-  width: 300px;
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
 }
 
 .modal .body {
