@@ -1,12 +1,11 @@
 import Gallery, { Content } from "../components/Gallery";
 
-import greenery from "../content/graphic-design/greenery.jpg";
+import greenery from "../content/graphic-design/greenery.png";
 import aranciata from "../content/graphic-design/aranciata.png";
-import colorPairings from "../content/graphic-design/color-pairings.jpg";
-import everyDayIsIceCreamDay from "../content/graphic-design/every-day-is-ice-cream-day.jpg";
+import colorPairings from "../content/graphic-design/color-pairings.png";
+import everyDayIsIceCreamDay from "../content/graphic-design/every-day-is-ice-cream-day.png";
 import iKnowTheEnd from "../content/graphic-design/i-know-the-end.jpg";
 import editorial from "../content/graphic-design/editorial.png";
-import poster from "../content/graphic-design/poster.png";
 
 const content: Content[] = [
   { id: "greenery", src: greenery, description: "Greenery" },
@@ -30,7 +29,6 @@ const content: Content[] = [
     description: "I Know The End",
   },
   { id: "editorial", src: editorial, description: "Editorial" },
-  { id: "poster", src: poster, description: "Poster" },
 ];
 
 const GraphicDesignGallery = () => <Gallery content={content} />;
