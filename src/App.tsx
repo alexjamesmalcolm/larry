@@ -32,9 +32,9 @@ const App = () => {
               </NavLink>
             </li>
             <li id={styles.about}>
-              <NavLink to="about" className={navLinkClassName}>
+              {/* <NavLink to="about" className={navLinkClassName}>
                 About
-              </NavLink>
+              </NavLink> */}
             </li>
             <li id={styles.instagram}>
               <a
