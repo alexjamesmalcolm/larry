@@ -2,8 +2,6 @@ import Gallery, { Content } from "../components/Gallery";
 
 import angela from "../content/illustration/angela.png";
 import birdHouse from "../content/illustration/bird-house.png";
-import characterExplorationTwo from "../content/illustration/character-exploration-2.jpg";
-import characterExploration from "../content/illustration/character-exploration.jpg";
 import cheers from "../content/illustration/cheers.jpg";
 import chemexFlower from "../content/illustration/chemex-flower.jpg";
 import cocktail from "../content/illustration/cocktail.png";
@@ -11,7 +9,6 @@ import coffeeSwim from "../content/illustration/coffee-swim.jpg";
 import drinks from "../content/illustration/drinks.png";
 import fourCubePeople from "../content/illustration/four-cube-people.png";
 import goofyGuy from "../content/illustration/goofy-guy.jpg";
-import guyOnLaptop from "../content/illustration/guy-on-laptop.jpg";
 import hannah from "../content/illustration/hannah.jpg";
 import laptopCoffeeBook from "../content/illustration/laptop-coffee-book.jpg";
 import larryCircle from "../content/illustration/larry-circle.jpg";
@@ -28,9 +25,9 @@ import selfPortrait from "../content/illustration/self-portrait.png";
 const content: Content[] = [
   { src: coffeeSwim, id: "coffee-swim", description: "Coffee Swim" },
   {
-    src: redHeadStudent,
-    id: "red-head-student",
-    description: "Red Head Student",
+    src: birdHouse,
+    id: "bird-house",
+    description: "Bird House",
   },
   {
     src: chemexFlower,
@@ -44,24 +41,14 @@ const content: Content[] = [
   },
   { src: weirdGuy, id: "weird-guy", description: "Weird Guy" },
   {
-    src: guyOnLaptop,
-    id: "guy-on-laptop",
-    description: "Guy on Laptop",
+    src: redHeadStudent,
+    id: "red-head-student",
+    description: "Red Head Student",
   },
   {
     src: laptopCoffeeBook,
     id: "laptop-coffee-book",
     description: "Laptop Coffee Book",
-  },
-  {
-    src: characterExplorationTwo,
-    id: "character-exploration-two",
-    description: "Character Exploration Two",
-  },
-  {
-    src: characterExploration,
-    id: "character-exploration",
-    description: "Character Exploration",
   },
   {
     src: fourCubePeople,
@@ -107,11 +94,6 @@ const content: Content[] = [
     src: angela,
     id: "angela",
     description: "Angela",
-  },
-  {
-    src: birdHouse,
-    id: "bird-house",
-    description: "Bird House",
   },
   { src: stuck, id: "stuck", description: "Stuck" },
 ];

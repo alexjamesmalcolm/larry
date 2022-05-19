@@ -1,35 +1,10 @@
 .container {
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
   grid-template-columns: repeat(var(--column-count), min-content);
-  grid-auto-rows: 389px;
-  --column-count: 5;
+  --column-count: 4;
   margin: auto;
   width: min-content;
-}
-
-@media (max-width: 1600px) {
-  .container {
-    --column-count: 4;
-  }
-}
-
-@media (max-width: 1300px) {
-  .container {
-    --column-count: 3;
-  }
-}
-
-@media (max-width: 1000px) {
-  .container {
-    --column-count: 2;
-  }
-}
-
-@media (max-width: 700px) {
-  .container {
-    --column-count: 1;
-  }
 }
 
 .name {
@@ -37,7 +12,9 @@
 }
 
 .galleryContainer .image {
-  width: 300px;
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
 }
 
 .modal .body {
@@ -49,4 +26,29 @@
   object-fit: contain;
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 1600px) {
+  .container {
+    --column-count: 3;
+  }
+}
+
+@media (max-width: 1300px) {
+  .container {
+    --column-count: 2;
+  }
+}
+
+@media (max-width: 860px) {
+  .container {
+    --column-count: 1;
+  }
+}
+
+@media (max-width: 400px) {
+  .galleryContainer .image {
+    width: 100vw;
+    height: 75vw;
+  }
 }
