@@ -1,0 +1,16 @@
+.container {
+  display: grid;
+  grid-template-columns: max-content auto;
+  --gap: 2rem;
+  gap: var(--gap);
+  width: calc(100vw - var(--gap) * 2);
+  margin: auto;
+}
+
+.headshot {
+  max-width: 300px;
+}
+
+.description {
+  text-align: justify;
+}
