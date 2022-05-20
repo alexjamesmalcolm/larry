@@ -52,7 +52,9 @@ const Gallery = ({ content }: { content: Content[] }) => {
               className={styles.image}
               src={src}
               alt={description}
-              loading={index > 7 ? "lazy" : "eager"}
+              width="400px"
+              height="300px"
+              loading={index > 8 ? "lazy" : "eager"}
             />
           </article>
         ))}
