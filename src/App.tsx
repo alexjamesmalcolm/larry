@@ -16,7 +16,7 @@ const App = () => {
     []
   );
   return (
-    <div>
+    <>
       <header className={styles.header}>
         <h1 id={styles.larryMitchell}>Larry Mitchell</h1>
         <nav className={styles.navigation}>
@@ -59,12 +59,14 @@ const App = () => {
           </ul>
         </nav>
       </header>
-      <Routes>
-        <Route index element={<IllustrationGallery />} />
-        <Route path="/graphic-design" element={<GraphicDesignGallery />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </div>
+      <main className={styles.main}>
+        <Routes>
+          <Route index element={<IllustrationGallery />} />
+          <Route path="/graphic-design" element={<GraphicDesignGallery />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </main>
+    </>
   );
 };
 

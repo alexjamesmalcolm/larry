@@ -5,6 +5,10 @@
   align-items: center;
 }
 
+.main {
+  display: contents;
+}
+
 .navigation {
   display: contents;
 }

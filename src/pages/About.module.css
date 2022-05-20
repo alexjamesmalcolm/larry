@@ -1,14 +1,21 @@
-.container {
+:global(#root) {
   display: grid;
-  grid-template-columns: max-content auto;
-  --gap: 2rem;
+  grid-template-rows: max-content auto;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  --gap: 8rem;
+  --header-margin: 3rem;
+  margin: 0 var(--gap);
+  margin-top: var(--header-margin);
   gap: var(--gap);
-  width: calc(100vw - var(--gap) * 2);
-  margin: auto;
 }
 
 .headshot {
-  max-width: 300px;
+  max-height: calc(100vh - 58px - var(--header-margin));
 }
 
 .description {
