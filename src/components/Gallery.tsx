@@ -18,8 +18,15 @@ const swiperModules: SwiperModule[] = [
   Mousewheel,
 ];
 
-export interface Content {
+interface Source {
+  id: string | number;
   src: string;
+  media?: string;
+}
+
+export interface Content {
+  legacySrc: string;
+  sources?: Source[];
   id: string;
   description: string;
 }
@@ -42,20 +49,25 @@ const Gallery = ({ content }: { content: Content[] }) => {
   return (
     <>
       <div className={styles.container}>
-        {content.map(({ id, src, description }, index) => (
+        {content.map(({ id, legacySrc, sources = [], description }, index) => (
           <article
             key={id}
             className={styles.galleryContainer}
             onClick={() => setActiveImageIndex(index)}
           >
-            <img
-              className={styles.image}
-              src={src}
-              alt={description}
-              width="400px"
-              height="300px"
-              loading={index > 8 ? "lazy" : "eager"}
-            />
+            <picture>
+              {sources.map(({ src, media, id }) => (
+                <source key={id} srcSet={src} media={media} />
+              ))}
+              <img
+                className={styles.image}
+                src={legacySrc}
+                alt={description}
+                width="400px"
+                height="300px"
+                loading={index > 8 ? "lazy" : "eager"}
+              />
+            </picture>
           </article>
         ))}
       </div>
@@ -81,9 +93,18 @@ const Gallery = ({ content }: { content: Content[] }) => {
             edgeSwipeDetection="prevent"
             direction={isSingleColumn ? "vertical" : "horizontal"}
           >
-            {content.map(({ description, id, src }) => (
+            {content.map(({ description, id, legacySrc, sources = [] }) => (
               <SwiperSlide key={id} className={styles.slide}>
-                <img src={src} alt={description} className={styles.image} />
+                <picture>
+                  {sources.map(({ src, media, id }) => (
+                    <source key={id} srcSet={src} media={media} />
+                  ))}
+                  <img
+                    className={styles.image}
+                    src={legacySrc}
+                    alt={description}
+                  />
+                </picture>
               </SwiperSlide>
             ))}
           </Swiper>

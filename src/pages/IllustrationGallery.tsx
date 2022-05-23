@@ -1,101 +1,284 @@
 import Gallery, { Content } from "../components/Gallery";
 
-import angela from "../content/illustration/angela.png";
-import birdHouse from "../content/illustration/bird-house.png";
-import cheers from "../content/illustration/cheers.jpg";
-import chemexFlower from "../content/illustration/chemex-flower.jpg";
-import cocktail from "../content/illustration/cocktail.png";
-import coffeeSwim from "../content/illustration/coffee-swim.jpg";
-import drinks from "../content/illustration/drinks.png";
-import fourCubePeople from "../content/illustration/four-cube-people.png";
-import goofyGuy from "../content/illustration/goofy-guy.jpg";
-import hannah from "../content/illustration/hannah.jpg";
-import laptopCoffeeBook from "../content/illustration/laptop-coffee-book.jpg";
-import larryCircle from "../content/illustration/larry-circle.jpg";
-import larryProfile from "../content/illustration/larry-profile.png";
-import redHeadStudent from "../content/illustration/red-head-student.jpg";
-import sadWoman from "../content/illustration/sad-woman.png";
-import sabrina from "../content/illustration/sabrina.jpg";
-import sicquanBand from "../content/illustration/sicquan-band.jpg";
-import stuck from "../content/illustration/stuck.png";
-import weirdGuy from "../content/illustration/weird-guy.jpg";
-import robot from "../content/illustration/robot.png";
-import selfPortrait from "../content/illustration/self-portrait.png";
+import angelaLegacy from "../content/illustration/angela.png";
+import angelaWebP from "../content/illustration/angela.webp";
+import angelaAvif from "../content/illustration/angela.avif";
+
+import birdHouseLegacy from "../content/illustration/bird-house.png";
+import birdHouseWebP from "../content/illustration/bird-house.webp";
+import birdHouseAvif from "../content/illustration/bird-house.avif";
+
+import cheersLegacy from "../content/illustration/cheers.jpg";
+import cheersWebP from "../content/illustration/cheers.webp";
+import cheersAvif from "../content/illustration/cheers.avif";
+
+import chemexFlowerLegacy from "../content/illustration/chemex-flower.jpg";
+import chemexFlowerWebP from "../content/illustration/chemex-flower.webp";
+import chemexFlowerAvif from "../content/illustration/chemex-flower.avif";
+
+import cocktailLegacy from "../content/illustration/cocktail.png";
+import cocktailWebP from "../content/illustration/cocktail.webp";
+import cocktailAvif from "../content/illustration/cocktail.avif";
+
+import coffeeSwimLegacy from "../content/illustration/coffee-swim.jpg";
+import coffeeSwimWebP from "../content/illustration/coffee-swim.webp";
+import coffeeSwimAvif from "../content/illustration/coffee-swim.avif";
+
+import drinksLegacy from "../content/illustration/drinks.png";
+import drinksWebP from "../content/illustration/drinks.webp";
+import drinksAvif from "../content/illustration/drinks.avif";
+
+import fourCubePeopleLegacy from "../content/illustration/four-cube-people.png";
+import fourCubePeopleWebP from "../content/illustration/four-cube-people.webp";
+import fourCubePeopleAvif from "../content/illustration/four-cube-people.avif";
+
+import goofyGuyLegacy from "../content/illustration/goofy-guy.jpg";
+import goofyGuyAvif from "../content/illustration/goofy-guy.avif";
+
+import hannahLegacy from "../content/illustration/hannah.jpg";
+import hannahWebP from "../content/illustration/hannah.webp";
+import hannahAvif from "../content/illustration/hannah.avif";
+
+import laptopCoffeeBookLegacy from "../content/illustration/laptop-coffee-book.jpg";
+import laptopCoffeeBookWebP from "../content/illustration/laptop-coffee-book.webp";
+import laptopCoffeeBookAvif from "../content/illustration/laptop-coffee-book.avif";
+
+import larryCircleLegacy from "../content/illustration/larry-circle.jpg";
+import larryCircleWebP from "../content/illustration/larry-circle.webp";
+import larryCircleAvif from "../content/illustration/larry-circle.avif";
+
+import larryProfileLegacy from "../content/illustration/larry-profile.png";
+import larryProfileWebP from "../content/illustration/larry-profile.webp";
+import larryProfileAvif from "../content/illustration/larry-profile.avif";
+
+import redHeadStudentLegacy from "../content/illustration/red-head-student.jpg";
+import redHeadStudentWebP from "../content/illustration/red-head-student.webp";
+import redHeadStudentAvif from "../content/illustration/red-head-student.avif";
+
+import sadWomanLegacy from "../content/illustration/sad-woman.png";
+import sadWomanWebP from "../content/illustration/sad-woman.webp";
+import sadWomanAvif from "../content/illustration/sad-woman.avif";
+
+import sabrinaLegacy from "../content/illustration/sabrina.jpg";
+import sabrinaWebP from "../content/illustration/sabrina.webp";
+import sabrinaAvif from "../content/illustration/sabrina.avif";
+
+import sicquanBandLegacy from "../content/illustration/sicquan-band.jpg";
+import sicquanBandWebP from "../content/illustration/sicquan-band.webp";
+import sicquanBandAvif from "../content/illustration/sicquan-band.avif";
+
+import stuckLegacy from "../content/illustration/stuck.png";
+import stuckWebP from "../content/illustration/stuck.webp";
+import stuckAvif from "../content/illustration/stuck.avif";
+
+import weirdGuyLegacy from "../content/illustration/weird-guy.jpg";
+import weirdGuyWebP from "../content/illustration/weird-guy.webp";
+import weirdGuyAvif from "../content/illustration/weird-guy.avif";
+
+import robotLegacy from "../content/illustration/robot.png";
+import robotWebP from "../content/illustration/robot.webp";
+import robotAvif from "../content/illustration/robot.avif";
+
+import selfPortraitLegacy from "../content/illustration/self-portrait.png";
+import selfPortraitWebP from "../content/illustration/self-portrait.webp";
+import selfPortraitAvif from "../content/illustration/self-portrait.avif";
 
 const content: Content[] = [
-  { src: coffeeSwim, id: "coffee-swim", description: "Coffee Swim" },
   {
-    src: birdHouse,
+    legacySrc: coffeeSwimLegacy,
+    sources: [
+      {
+        id: "avif",
+        src: coffeeSwimAvif,
+      },
+      {
+        id: "webp",
+        src: coffeeSwimWebP,
+      },
+    ],
+    id: "coffee-swim",
+    description: "Coffee Swim",
+  },
+  {
+    legacySrc: birdHouseLegacy,
+    sources: [
+      { id: "avif", src: birdHouseAvif },
+      { id: "webp", src: birdHouseWebP },
+    ],
     id: "bird-house",
     description: "Bird House",
   },
   {
-    src: chemexFlower,
+    legacySrc: chemexFlowerLegacy,
+    sources: [
+      { id: "avif", src: chemexFlowerAvif },
+      { id: "webp", src: chemexFlowerWebP },
+    ],
     id: "chemex-flower",
     description: "Chemex Flower",
   },
   {
-    src: cheers,
+    legacySrc: cheersLegacy,
+    sources: [
+      { id: "avif", src: cheersAvif },
+      { id: "webp", src: cheersWebP },
+    ],
     id: "cheers",
     description: "Cheers",
   },
-  { src: weirdGuy, id: "weird-guy", description: "Weird Guy" },
   {
-    src: redHeadStudent,
+    legacySrc: weirdGuyLegacy,
+    sources: [
+      { id: "avif", src: weirdGuyAvif },
+      { id: "webp", src: weirdGuyWebP },
+    ],
+    id: "weird-guy",
+    description: "Weird Guy",
+  },
+  {
+    legacySrc: redHeadStudentLegacy,
+    sources: [
+      { id: "avif", src: redHeadStudentAvif },
+      { id: "webp", src: redHeadStudentWebP },
+    ],
     id: "red-head-student",
     description: "Red Head Student",
   },
   {
-    src: laptopCoffeeBook,
+    legacySrc: laptopCoffeeBookLegacy,
+    sources: [
+      { id: "avif", src: laptopCoffeeBookAvif },
+      { id: "webp", src: laptopCoffeeBookWebP },
+    ],
     id: "laptop-coffee-book",
     description: "Laptop Coffee Book",
   },
   {
-    src: fourCubePeople,
+    legacySrc: fourCubePeopleLegacy,
+    sources: [
+      { id: "avif", src: fourCubePeopleAvif },
+      { id: "webp", src: fourCubePeopleWebP },
+    ],
     id: "four-cube-people",
     description: "Four Cube People",
   },
-  { src: hannah, id: "hannah", description: "Hannah" },
   {
-    src: goofyGuy,
+    legacySrc: hannahLegacy,
+    sources: [
+      { id: "avif", src: hannahAvif },
+      { id: "webp", src: hannahWebP },
+    ],
+    id: "hannah",
+    description: "Hannah",
+  },
+  {
+    legacySrc: goofyGuyLegacy,
+    sources: [{ id: "avif", src: goofyGuyAvif }],
     id: "goofy-guy",
     description: "Goofy Guy",
   },
   {
-    src: larryCircle,
+    legacySrc: larryCircleLegacy,
+    sources: [
+      { id: "avif", src: larryCircleAvif },
+      { id: "webp", src: larryCircleWebP },
+    ],
     id: "larry-circle",
     description: "Larry Circle",
   },
-  { src: sabrina, id: "sabrina", description: "Sabrina" },
   {
-    src: sicquanBand,
+    legacySrc: sabrinaLegacy,
+    sources: [
+      { id: "avif", src: sabrinaAvif },
+      { id: "webp", src: sabrinaWebP },
+    ],
+    id: "sabrina",
+    description: "Sabrina",
+  },
+  {
+    legacySrc: sicquanBandLegacy,
+    sources: [
+      { id: "avif", src: sicquanBandAvif },
+      { id: "webp", src: sicquanBandWebP },
+    ],
     id: "sicquan-band",
     description: "Sicquan Band",
   },
-  { src: drinks, id: "drinks", description: "Drinks" },
   {
-    src: cocktail,
+    legacySrc: drinksLegacy,
+    sources: [
+      { id: "avif", src: drinksAvif },
+      { id: "webp", src: drinksWebP },
+    ],
+    id: "drinks",
+    description: "Drinks",
+  },
+  {
+    legacySrc: cocktailLegacy,
+    sources: [
+      { id: "avif", src: cocktailAvif },
+      { id: "webp", src: cocktailWebP },
+    ],
     id: "cocktail",
     description: "Cocktail",
   },
   {
-    src: larryProfile,
+    legacySrc: larryProfileLegacy,
+    sources: [
+      { id: "avif", src: larryProfileAvif },
+      { id: "webp", src: larryProfileWebP },
+    ],
     id: "larry-profile",
     description: "Larry Profile",
   },
-  { src: sadWoman, id: "saw-woman", description: "Sad Woman" },
-  { src: robot, id: "robot", description: "Robot" },
   {
-    src: selfPortrait,
+    legacySrc: sadWomanLegacy,
+    sources: [
+      { id: "avif", src: sadWomanAvif },
+      { id: "webp", src: sadWomanWebP },
+    ],
+    id: "saw-woman",
+    description: "Sad Woman",
+  },
+  {
+    legacySrc: robotLegacy,
+    sources: [
+      { id: "avif", src: robotAvif },
+      { id: "webp", src: robotWebP },
+    ],
+    id: "robot",
+    description: "Robot",
+  },
+  {
+    legacySrc: selfPortraitLegacy,
+    sources: [
+      { id: "avif", src: selfPortraitAvif },
+      { id: "webp", src: selfPortraitWebP },
+    ],
     id: "self-portrait",
     description: "Self Portrait",
   },
   {
-    src: angela,
+    legacySrc: angelaLegacy,
+    sources: [
+      { id: "avif", src: angelaAvif },
+      {
+        id: "webp",
+        src: angelaWebP,
+      },
+    ],
     id: "angela",
     description: "Angela",
   },
-  { src: stuck, id: "stuck", description: "Stuck" },
+  {
+    legacySrc: stuckLegacy,
+    sources: [
+      { id: "avif", src: stuckAvif },
+      { id: "webp", src: stuckWebP },
+    ],
+    id: "stuck",
+    description: "Stuck",
+  },
 ];
 
 const IllustrationGallery = () => <Gallery content={content} />;
