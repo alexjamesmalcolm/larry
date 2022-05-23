@@ -1,0 +1,10 @@
+:global(#root) {
+  display: grid;
+  grid-template-rows: max-content auto;
+  height: 100vh;
+}
+
+.spinner {
+  justify-self: center;
+  align-self: center;
+}

@@ -1,12 +1,14 @@
 import { Route, Routes, NavLink } from "react-router-dom";
-import GraphicDesignGallery from "./pages/GraphicDesignGallery";
-import IllustrationGallery from "./pages/IllustrationGallery";
 import styles from "./App.module.css";
 import classNames from "classnames";
-import { useCallback } from "react";
+import { lazy, Suspense, useCallback } from "react";
 import instagram from "./images/instagram.svg";
 import linkedin from "./images/linkedin.svg";
-import About from "./pages/About";
+import Loading from "./pages/Loading";
+
+const GraphicDesignGallery = lazy(() => import("./pages/GraphicDesignGallery"));
+const IllustrationGallery = lazy(() => import("./pages/IllustrationGallery"));
+const About = lazy(() => import("./pages/About"));
 
 const App = () => {
   const navLinkClassName = useCallback<
@@ -61,9 +63,30 @@ const App = () => {
       </header>
       <main className={styles.main}>
         <Routes>
-          <Route index element={<IllustrationGallery />} />
-          <Route path="/graphic-design" element={<GraphicDesignGallery />} />
-          <Route path="/about" element={<About />} />
+          <Route
+            index
+            element={
+              <Suspense fallback={<Loading />}>
+                <IllustrationGallery />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/graphic-design"
+            element={
+              <Suspense fallback={<Loading />}>
+                <GraphicDesignGallery />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <Suspense fallback={<Loading />}>
+                <About />
+              </Suspense>
+            }
+          />
         </Routes>
       </main>
     </>
