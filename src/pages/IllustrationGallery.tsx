@@ -83,6 +83,18 @@ import selfPortraitLegacy from "../content/illustration/self-portrait.png";
 import selfPortraitWebP from "../content/illustration/self-portrait.webp";
 import selfPortraitAvif from "../content/illustration/self-portrait.avif";
 
+import boyWithBalloonLegacy from "../content/illustration/boy-with-balloon.jpg";
+import boyWithBalloonWebP from "../content/illustration/boy-with-balloon.webp";
+import boyWithBalloonAvif from "../content/illustration/boy-with-balloon.avif";
+
+import lighthouseLegacy from "../content/illustration/lighthouse.jpg";
+import lighthouseWebP from "../content/illustration/lighthouse.webp";
+import lighthouseAvif from "../content/illustration/lighthouse.avif";
+
+import manInBoatLegacy from "../content/illustration/man-in-boat.jpg";
+import manInBoatWebP from "../content/illustration/man-in-boat.webp";
+import manInBoatAvif from "../content/illustration/man-in-boat.avif";
+
 const content: Content[] = [
   {
     legacySrc: coffeeSwimLegacy,
@@ -194,6 +206,33 @@ const content: Content[] = [
     ],
     id: "sabrina",
     description: "Sabrina",
+  },
+  {
+    legacySrc: boyWithBalloonLegacy,
+    description: "Boy with balloon",
+    id: "boy-with-balloon",
+    sources: [
+      { id: "webp", src: boyWithBalloonWebP },
+      { id: "avif", src: boyWithBalloonAvif },
+    ],
+  },
+  {
+    legacySrc: lighthouseLegacy,
+    description: "lighthouse",
+    id: "lighthouse",
+    sources: [
+      { id: "avif", src: lighthouseAvif },
+      { id: "webp", src: lighthouseWebP },
+    ],
+  },
+  {
+    legacySrc: manInBoatLegacy,
+    description: "Man in boat",
+    id: "man-in-boat",
+    sources: [
+      { id: "avif", src: manInBoatAvif },
+      { id: "webp", src: manInBoatWebP },
+    ],
   },
   {
     legacySrc: sicquanBandLegacy,
