@@ -1,13 +1,19 @@
 import styles from "./About.module.css";
-import headshot from "../images/headshot.jpg";
+import headshotLegacy from "../images/headshot.jpg";
+import headshotWebP from "../images/headshot.webp";
+import headshotAvif from "../images/headshot.avif";
 
 const About = () => (
   <div className={styles.container}>
-    <img
-      src={headshot}
-      alt="Larry Mitchell in an orange beanie with a nice jean jacket"
-      className={styles.headshot}
-    />
+    <picture>
+      <source srcSet={headshotAvif} />
+      <source srcSet={headshotWebP} />
+      <img
+        src={headshotLegacy}
+        alt="Larry Mitchell in an orange beanie with a nice jean jacket"
+        className={styles.headshot}
+      />
+    </picture>
     <p className={styles.description}>
       Born in Cleveland, Ohio Larry moved to Columbus, Ohio to study Graphic
       Design and Fine Arts at the school of Columbus College of Art and Design.
