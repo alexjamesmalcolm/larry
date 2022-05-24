@@ -40,7 +40,7 @@ const Gallery = ({ content }: { content: Content[] }) => {
                 alt={description}
                 width="400px"
                 height="300px"
-                loading={index > 8 ? "lazy" : "eager"}
+                loading={index > 1 ? "lazy" : "eager"}
               />
             </picture>
           </article>
