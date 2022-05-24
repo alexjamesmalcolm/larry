@@ -1,10 +1,12 @@
 import { lazy, Suspense, useState } from "react";
 import styles from "./Gallery.module.css";
+import Picture from "./Picture";
 
 const LightboxModal = lazy(() => import("./LightboxModal"));
 
-interface Source {
+export interface Source {
   id: string | number;
+  width?: number;
   src: string;
   type: string;
   media?: string;
@@ -30,19 +32,15 @@ const Gallery = ({ content }: { content: Content[] }) => {
             className={styles.galleryContainer}
             onClick={() => setActiveImageIndex(index)}
           >
-            <picture>
-              {sources.map(({ src, media, id, type }) => (
-                <source key={id} srcSet={src} media={media} type={type} />
-              ))}
-              <img
-                className={styles.image}
-                src={legacySrc}
-                alt={description}
-                width="400px"
-                height="300px"
-                loading={index > 1 ? "lazy" : "eager"}
-              />
-            </picture>
+            <Picture
+              sources={sources}
+              className={styles.image}
+              src={legacySrc}
+              alt={description}
+              width="400px"
+              height="300px"
+              loading={index > 1 ? "lazy" : "eager"}
+            />
           </article>
         ))}
       </div>

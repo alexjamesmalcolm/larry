@@ -12,6 +12,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Picture from "./Picture";
 
 const swiperModules: SwiperModule[] = [
   Navigation,
@@ -68,16 +69,12 @@ const LightboxModal = ({
         >
           {content.map(({ description, id, legacySrc, sources = [] }) => (
             <SwiperSlide key={id} className={styles.slide}>
-              <picture>
-                {sources.map(({ src, media, id, type }) => (
-                  <source key={id} srcSet={src} media={media} type={type} />
-                ))}
-                <img
-                  className={styles.image}
-                  src={legacySrc}
-                  alt={description}
-                />
-              </picture>
+              <Picture
+                className={styles.images}
+                src={legacySrc}
+                alt={description}
+                sources={sources}
+              />
             </SwiperSlide>
           ))}
         </Swiper>
