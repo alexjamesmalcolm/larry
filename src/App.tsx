@@ -1,13 +1,15 @@
 import { Route, Routes, NavLink } from "react-router-dom";
-import GraphicDesignGallery from "./pages/GraphicDesignGallery";
-import IllustrationGallery from "./pages/IllustrationGallery";
 import styles from "./App.module.css";
 import classNames from "classnames";
-import { useCallback } from "react";
+import { lazy, Suspense, useCallback } from "react";
 import instagram from "./images/instagram.svg";
 import linkedin from "./images/linkedin.svg";
-import About from "./pages/About";
-import Admin from "./pages/Admin";
+import Loading from "./pages/Loading";
+
+const GraphicDesignGallery = lazy(() => import("./pages/GraphicDesignGallery"));
+const IllustrationGallery = lazy(() => import("./pages/IllustrationGallery"));
+const About = lazy(() => import("./pages/About"));
+const Admin = lazy(() => import("./pages/Admin"));
 
 const App = () => {
   const navLinkClassName = useCallback<
@@ -17,7 +19,7 @@ const App = () => {
     []
   );
   return (
-    <div>
+    <>
       <header className={styles.header}>
         <h1 id={styles.larryMitchell}>Larry Mitchell</h1>
         <nav className={styles.navigation}>
@@ -33,9 +35,9 @@ const App = () => {
               </NavLink>
             </li>
             <li id={styles.about}>
-              <NavLink to="about" className={navLinkClassName}>
+              {/* <NavLink to="about" className={navLinkClassName}>
                 About
-              </NavLink>
+              </NavLink> */}
             </li>
             <li id={styles.instagram}>
               <a
@@ -44,7 +46,12 @@ const App = () => {
                 rel="noreferrer"
                 className={styles.link}
               >
-                <img src={instagram} alt="Instagram" />
+                <img
+                  src={instagram}
+                  alt="Instagram"
+                  width="24px"
+                  height="24px"
+                />
               </a>
             </li>
             <li id={styles.linkedin}>
@@ -54,19 +61,49 @@ const App = () => {
                 rel="noreferrer"
                 className={styles.link}
               >
-                <img height="20px" src={linkedin} alt="LinkedIn" />
+                <img src={linkedin} alt="LinkedIn" width="20px" height="20px" />
               </a>
             </li>
           </ul>
         </nav>
       </header>
-      <Routes>
-        <Route index element={<IllustrationGallery />} />
-        <Route path="/graphic-design" element={<GraphicDesignGallery />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/admin" element={<Admin />} />
-      </Routes>
-    </div>
+      <main className={styles.main}>
+        <Routes>
+          <Route
+            index
+            element={
+              <Suspense fallback={<Loading />}>
+                <IllustrationGallery />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/graphic-design"
+            element={
+              <Suspense fallback={<Loading />}>
+                <GraphicDesignGallery />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <Suspense fallback={<Loading />}>
+                <About />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/admin"
+            element={
+              <Suspense fallback={<Loading />}>
+                <Admin />
+              </Suspense>
+            }
+          />
+        </Routes>
+      </main>
+    </>
   );
 };
 
