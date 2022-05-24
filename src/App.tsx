@@ -45,7 +45,12 @@ const App = () => {
                 rel="noreferrer"
                 className={styles.link}
               >
-                <img src={instagram} alt="Instagram" />
+                <img
+                  src={instagram}
+                  alt="Instagram"
+                  width="24px"
+                  height="24px"
+                />
               </a>
             </li>
             <li id={styles.linkedin}>
@@ -55,7 +60,7 @@ const App = () => {
                 rel="noreferrer"
                 className={styles.link}
               >
-                <img height="20px" src={linkedin} alt="LinkedIn" />
+                <img src={linkedin} alt="LinkedIn" width="20px" height="20px" />
               </a>
             </li>
           </ul>
