@@ -29,8 +29,8 @@ const content: Content[] = [
     id: "greenery",
     legacySrc: greeneryLegacy,
     sources: [
-      { id: "avif", src: greeneryAvif },
-      { id: "webp", src: greeneryWebP },
+      { id: "avif", type: "image/avif", src: greeneryAvif },
+      { id: "webp", type: "image/webp", src: greeneryWebP },
     ],
     description: "Greenery",
   },
@@ -38,8 +38,8 @@ const content: Content[] = [
     id: "aranciata",
     legacySrc: aranciataLegacy,
     sources: [
-      { id: "avif", src: aranciataAvif },
-      { id: "webp", src: aranciataWebP },
+      { id: "avif", type: "image/avif", src: aranciataAvif },
+      { id: "webp", type: "image/webp", src: aranciataWebP },
     ],
     description: "Aranciata",
   },
@@ -47,8 +47,8 @@ const content: Content[] = [
     id: "colorPairings",
     legacySrc: colorPairingsLegacy,
     sources: [
-      { id: "avif", src: colorPairingsAvif },
-      { id: "webp", src: colorPairingsWebP },
+      { id: "avif", type: "image/avif", src: colorPairingsAvif },
+      { id: "webp", type: "image/webp", src: colorPairingsWebP },
     ],
 
     description: "Color Pairings",
@@ -57,8 +57,8 @@ const content: Content[] = [
     id: "every-day-is-ice-cream-day",
     legacySrc: everyDayIsIceCreamDayLegacy,
     sources: [
-      { id: "avif", src: everyDayIsIceCreamDayAvif },
-      { id: "webp", src: everyDayIsIceCreamDayWebP },
+      { id: "avif", type: "image/avif", src: everyDayIsIceCreamDayAvif },
+      { id: "webp", type: "image/webp", src: everyDayIsIceCreamDayWebP },
     ],
 
     description: "Every Day is Ice Cream Day",
@@ -67,8 +67,8 @@ const content: Content[] = [
     id: "i-know-the-end",
     legacySrc: iKnowTheEndLegacy,
     sources: [
-      { id: "avif", src: iKnowTheEndAvif },
-      { id: "webp", src: iKnowTheEndWebP },
+      { id: "avif", type: "image/avif", src: iKnowTheEndAvif },
+      { id: "webp", type: "image/webp", src: iKnowTheEndWebP },
     ],
 
     description: "I Know The End",
@@ -77,8 +77,8 @@ const content: Content[] = [
     id: "editorial",
     legacySrc: editorialLegacy,
     sources: [
-      { id: "avif", src: editorialAvif },
-      { id: "webp", src: editorialWebP },
+      { id: "avif", type: "image/avif", src: editorialAvif },
+      { id: "webp", type: "image/webp", src: editorialWebP },
     ],
     description: "Editorial",
   },

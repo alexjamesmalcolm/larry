@@ -101,10 +101,12 @@ const content: Content[] = [
     sources: [
       {
         id: "avif",
+        type: "image/avif",
         src: coffeeSwimAvif,
       },
       {
         id: "webp",
+        type: "image/webp",
         src: coffeeSwimWebP,
       },
     ],
@@ -114,8 +116,8 @@ const content: Content[] = [
   {
     legacySrc: birdHouseLegacy,
     sources: [
-      { id: "avif", src: birdHouseAvif },
-      { id: "webp", src: birdHouseWebP },
+      { id: "avif", type: "image/avif", src: birdHouseAvif },
+      { id: "webp", type: "image/webp", src: birdHouseWebP },
     ],
     id: "bird-house",
     description: "Bird House",
@@ -123,8 +125,8 @@ const content: Content[] = [
   {
     legacySrc: chemexFlowerLegacy,
     sources: [
-      { id: "avif", src: chemexFlowerAvif },
-      { id: "webp", src: chemexFlowerWebP },
+      { id: "avif", type: "image/avif", src: chemexFlowerAvif },
+      { id: "webp", type: "image/webp", src: chemexFlowerWebP },
     ],
     id: "chemex-flower",
     description: "Chemex Flower",
@@ -132,8 +134,8 @@ const content: Content[] = [
   {
     legacySrc: cheersLegacy,
     sources: [
-      { id: "avif", src: cheersAvif },
-      { id: "webp", src: cheersWebP },
+      { id: "avif", type: "image/avif", src: cheersAvif },
+      { id: "webp", type: "image/webp", src: cheersWebP },
     ],
     id: "cheers",
     description: "Cheers",
@@ -141,8 +143,8 @@ const content: Content[] = [
   {
     legacySrc: weirdGuyLegacy,
     sources: [
-      { id: "avif", src: weirdGuyAvif },
-      { id: "webp", src: weirdGuyWebP },
+      { id: "avif", type: "image/avif", src: weirdGuyAvif },
+      { id: "webp", type: "image/webp", src: weirdGuyWebP },
     ],
     id: "weird-guy",
     description: "Weird Guy",
@@ -150,8 +152,8 @@ const content: Content[] = [
   {
     legacySrc: redHeadStudentLegacy,
     sources: [
-      { id: "avif", src: redHeadStudentAvif },
-      { id: "webp", src: redHeadStudentWebP },
+      { id: "avif", type: "image/avif", src: redHeadStudentAvif },
+      { id: "webp", type: "image/webp", src: redHeadStudentWebP },
     ],
     id: "red-head-student",
     description: "Red Head Student",
@@ -159,8 +161,8 @@ const content: Content[] = [
   {
     legacySrc: laptopCoffeeBookLegacy,
     sources: [
-      { id: "avif", src: laptopCoffeeBookAvif },
-      { id: "webp", src: laptopCoffeeBookWebP },
+      { id: "avif", type: "image/avif", src: laptopCoffeeBookAvif },
+      { id: "webp", type: "image/webp", src: laptopCoffeeBookWebP },
     ],
     id: "laptop-coffee-book",
     description: "Laptop Coffee Book",
@@ -168,8 +170,8 @@ const content: Content[] = [
   {
     legacySrc: fourCubePeopleLegacy,
     sources: [
-      { id: "avif", src: fourCubePeopleAvif },
-      { id: "webp", src: fourCubePeopleWebP },
+      { id: "avif", type: "image/avif", src: fourCubePeopleAvif },
+      { id: "webp", type: "image/webp", src: fourCubePeopleWebP },
     ],
     id: "four-cube-people",
     description: "Four Cube People",
@@ -177,23 +179,23 @@ const content: Content[] = [
   {
     legacySrc: hannahLegacy,
     sources: [
-      { id: "avif", src: hannahAvif },
-      { id: "webp", src: hannahWebP },
+      { id: "avif", type: "image/avif", src: hannahAvif },
+      { id: "webp", type: "image/webp", src: hannahWebP },
     ],
     id: "hannah",
     description: "Hannah",
   },
   {
     legacySrc: goofyGuyLegacy,
-    sources: [{ id: "avif", src: goofyGuyAvif }],
+    sources: [{ id: "avif", type: "image/avif", src: goofyGuyAvif }],
     id: "goofy-guy",
     description: "Goofy Guy",
   },
   {
     legacySrc: larryCircleLegacy,
     sources: [
-      { id: "avif", src: larryCircleAvif },
-      { id: "webp", src: larryCircleWebP },
+      { id: "avif", type: "image/avif", src: larryCircleAvif },
+      { id: "webp", type: "image/webp", src: larryCircleWebP },
     ],
     id: "larry-circle",
     description: "Larry Circle",
@@ -201,8 +203,8 @@ const content: Content[] = [
   {
     legacySrc: sabrinaLegacy,
     sources: [
-      { id: "avif", src: sabrinaAvif },
-      { id: "webp", src: sabrinaWebP },
+      { id: "avif", type: "image/avif", src: sabrinaAvif },
+      { id: "webp", type: "image/webp", src: sabrinaWebP },
     ],
     id: "sabrina",
     description: "Sabrina",
@@ -212,8 +214,8 @@ const content: Content[] = [
     description: "Boy with balloon",
     id: "boy-with-balloon",
     sources: [
-      { id: "webp", src: boyWithBalloonWebP },
-      { id: "avif", src: boyWithBalloonAvif },
+      { id: "webp", type: "image/webp", src: boyWithBalloonWebP },
+      { id: "avif", type: "image/avif", src: boyWithBalloonAvif },
     ],
   },
   {
@@ -221,8 +223,8 @@ const content: Content[] = [
     description: "lighthouse",
     id: "lighthouse",
     sources: [
-      { id: "avif", src: lighthouseAvif },
-      { id: "webp", src: lighthouseWebP },
+      { id: "avif", type: "image/avif", src: lighthouseAvif },
+      { id: "webp", type: "image/webp", src: lighthouseWebP },
     ],
   },
   {
@@ -230,15 +232,15 @@ const content: Content[] = [
     description: "Man in boat",
     id: "man-in-boat",
     sources: [
-      { id: "avif", src: manInBoatAvif },
-      { id: "webp", src: manInBoatWebP },
+      { id: "avif", type: "image/avif", src: manInBoatAvif },
+      { id: "webp", type: "image/webp", src: manInBoatWebP },
     ],
   },
   {
     legacySrc: sicquanBandLegacy,
     sources: [
-      { id: "avif", src: sicquanBandAvif },
-      { id: "webp", src: sicquanBandWebP },
+      { id: "avif", type: "image/avif", src: sicquanBandAvif },
+      { id: "webp", type: "image/webp", src: sicquanBandWebP },
     ],
     id: "sicquan-band",
     description: "Sicquan Band",
@@ -246,8 +248,8 @@ const content: Content[] = [
   {
     legacySrc: drinksLegacy,
     sources: [
-      { id: "avif", src: drinksAvif },
-      { id: "webp", src: drinksWebP },
+      { id: "avif", type: "image/avif", src: drinksAvif },
+      { id: "webp", type: "image/webp", src: drinksWebP },
     ],
     id: "drinks",
     description: "Drinks",
@@ -255,8 +257,8 @@ const content: Content[] = [
   {
     legacySrc: cocktailLegacy,
     sources: [
-      { id: "avif", src: cocktailAvif },
-      { id: "webp", src: cocktailWebP },
+      { id: "avif", type: "image/avif", src: cocktailAvif },
+      { id: "webp", type: "image/webp", src: cocktailWebP },
     ],
     id: "cocktail",
     description: "Cocktail",
@@ -264,8 +266,8 @@ const content: Content[] = [
   {
     legacySrc: larryProfileLegacy,
     sources: [
-      { id: "avif", src: larryProfileAvif },
-      { id: "webp", src: larryProfileWebP },
+      { id: "avif", type: "image/avif", src: larryProfileAvif },
+      { id: "webp", type: "image/webp", src: larryProfileWebP },
     ],
     id: "larry-profile",
     description: "Larry Profile",
@@ -273,8 +275,8 @@ const content: Content[] = [
   {
     legacySrc: sadWomanLegacy,
     sources: [
-      { id: "avif", src: sadWomanAvif },
-      { id: "webp", src: sadWomanWebP },
+      { id: "avif", type: "image/avif", src: sadWomanAvif },
+      { id: "webp", type: "image/webp", src: sadWomanWebP },
     ],
     id: "saw-woman",
     description: "Sad Woman",
@@ -282,8 +284,8 @@ const content: Content[] = [
   {
     legacySrc: robotLegacy,
     sources: [
-      { id: "avif", src: robotAvif },
-      { id: "webp", src: robotWebP },
+      { id: "avif", type: "image/avif", src: robotAvif },
+      { id: "webp", type: "image/webp", src: robotWebP },
     ],
     id: "robot",
     description: "Robot",
@@ -291,8 +293,8 @@ const content: Content[] = [
   {
     legacySrc: selfPortraitLegacy,
     sources: [
-      { id: "avif", src: selfPortraitAvif },
-      { id: "webp", src: selfPortraitWebP },
+      { id: "avif", type: "image/avif", src: selfPortraitAvif },
+      { id: "webp", type: "image/webp", src: selfPortraitWebP },
     ],
     id: "self-portrait",
     description: "Self Portrait",
@@ -300,9 +302,10 @@ const content: Content[] = [
   {
     legacySrc: angelaLegacy,
     sources: [
-      { id: "avif", src: angelaAvif },
+      { id: "avif", type: "image/avif", src: angelaAvif },
       {
         id: "webp",
+        type: "image/webp",
         src: angelaWebP,
       },
     ],
@@ -312,8 +315,8 @@ const content: Content[] = [
   {
     legacySrc: stuckLegacy,
     sources: [
-      { id: "avif", src: stuckAvif },
-      { id: "webp", src: stuckWebP },
+      { id: "avif", type: "image/avif", src: stuckAvif },
+      { id: "webp", type: "image/webp", src: stuckWebP },
     ],
     id: "stuck",
     description: "Stuck",

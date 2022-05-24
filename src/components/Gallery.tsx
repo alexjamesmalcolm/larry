@@ -6,6 +6,7 @@ const LightboxModal = lazy(() => import("./LightboxModal"));
 interface Source {
   id: string | number;
   src: string;
+  type: string;
   media?: string;
 }
 
@@ -30,8 +31,8 @@ const Gallery = ({ content }: { content: Content[] }) => {
             onClick={() => setActiveImageIndex(index)}
           >
             <picture>
-              {sources.map(({ src, media, id }) => (
-                <source key={id} srcSet={src} media={media} />
+              {sources.map(({ src, media, id, type }) => (
+                <source key={id} srcSet={src} media={media} type={type} />
               ))}
               <img
                 className={styles.image}

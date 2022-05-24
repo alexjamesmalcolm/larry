@@ -28,7 +28,10 @@ const LightboxModal = ({
   activeImageIndex: number | undefined;
   content: Content[];
 }) => {
-  const close = useCallback(() => setActiveImageIndex(undefined), []);
+  const close = useCallback(
+    () => setActiveImageIndex(undefined),
+    [setActiveImageIndex]
+  );
   const isSingleColumn = useMediaQuery({ maxWidth: "700px" });
   const deviceHasFinePointer = useMediaQuery({ query: "(pointer: fine)" });
   const onSwiperCreation = useCallback(
@@ -65,8 +68,8 @@ const LightboxModal = ({
           {content.map(({ description, id, legacySrc, sources = [] }) => (
             <SwiperSlide key={id} className={styles.slide}>
               <picture>
-                {sources.map(({ src, media, id }) => (
-                  <source key={id} srcSet={src} media={media} />
+                {sources.map(({ src, media, id, type }) => (
+                  <source key={id} srcSet={src} media={media} type={type} />
                 ))}
                 <img
                   className={styles.image}
