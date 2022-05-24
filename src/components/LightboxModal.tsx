@@ -11,6 +11,7 @@ import { Content } from "./Gallery";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const swiperModules: SwiperModule[] = [
   Navigation,

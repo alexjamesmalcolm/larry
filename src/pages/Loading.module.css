@@ -7,4 +7,16 @@
 .spinner {
   justify-self: center;
   align-self: center;
+  width: 50px;
+  animation: infinite 1s rotate;
+  transform-origin: center 47.5%;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

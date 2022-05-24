@@ -1,6 +1,8 @@
-import Spinner from "react-bootstrap/Spinner";
 import styles from "./Loading.module.css";
+import spinner from "../images/spinner.png";
 
-const Loading = () => <Spinner animation="border" className={styles.spinner} />;
+const Loading = () => (
+  <img src={spinner} alt="Loading indicator" className={styles.spinner} />
+);
 
 export default Loading;
