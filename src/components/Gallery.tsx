@@ -14,6 +14,7 @@ export interface Source {
 
 export interface Content {
   legacySrc: string;
+  legacyType?: string;
   sources?: Source[];
   id: string;
   description: string;
