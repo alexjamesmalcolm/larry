@@ -37,10 +37,9 @@ const main = async () => {
     if (isOptimizedPresent) {
       await fs.rm(optimizedDirectoryPath, { recursive: true });
     }
-    // if (!isOptimizedPresent) {
+
     await fs.mkdir(optimizedDirectoryPath);
-    // }
-    // const optimizedDirectory = await fs.opendir(optimizedDirectoryPath);
+
     for await (const image of directory) {
       if (!image.isDirectory()) {
         console.log(`Processing ${image.name}`);
