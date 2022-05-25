@@ -24,8 +24,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test"
+    "build": "npm run optimize-images && react-scripts build",
+    "test": "react-scripts test",
+    "optimize-images": "node src/resize.mjs"
   },
   "eslintConfig": {
     "extends": [
