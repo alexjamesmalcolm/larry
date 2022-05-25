@@ -29,7 +29,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm run optimize-images && react-scripts build",
     "test": "react-scripts test",
     "optimize-images": "node src/resize.mjs"
   },
