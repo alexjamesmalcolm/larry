@@ -23,7 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Optimized images
-src/content/**/optimized/
+**/optimized/
 
 #amplify-do-not-edit-begin
 amplify/\#current-cloud-backend
