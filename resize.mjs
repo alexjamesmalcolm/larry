@@ -2,7 +2,7 @@ import sharp from "sharp";
 import fs from "fs/promises";
 
 const getAllWidths = (width) => {
-  const limit = 200;
+  const limit = 500;
   const firstTry = width - (width % limit);
   if (firstTry === 0) {
     return [width];
@@ -19,10 +19,7 @@ const getAllWidthsRecursive = (width, limit) => {
 };
 
 const main = async () => {
-  const folderPaths = [
-    "src/content/illustration",
-    "src/content/graphic-design",
-  ];
+  const folderPaths = ["public/illustration", "public/graphic-design"];
 
   for await (const folderPath of folderPaths) {
     console.log(`Processing directory ${folderPath}`);
@@ -41,21 +38,28 @@ const main = async () => {
     await fs.mkdir(optimizedDirectoryPath);
 
     for await (const image of directory) {
-      if (!image.isDirectory()) {
+      if (
+        !image.isDirectory() &&
+        ["png", "jpeg", "jpg"].some((imageType) =>
+          image.name.endsWith(imageType)
+        )
+      ) {
         console.log(`Processing ${image.name}`);
         const loadImage = () => sharp(`${folderPath}/${image.name}`);
 
         const metadata = await loadImage().metadata();
 
         for await (const type of ["avif", "webp"]) {
-          const allWidths = getAllWidths(metadata.width);
+          const allWidths = getAllWidths(metadata.width).filter(
+            (width) => width <= 4000
+          );
           for await (const width of allWidths) {
             const optimizedImageName = `${
               image.name.split(".")[0]
             }-${width}w.${type}`;
             const optimizedImagePath = `${optimizedDirectoryPath}/${optimizedImageName}`;
             console.log(`Creating ${optimizedImageName} from ${image.name}`);
-            await loadImage()
+            loadImage()
               .resize({ width, fit: "inside" })
               .toFile(optimizedImagePath)
               .finally(() => {
