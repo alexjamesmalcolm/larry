@@ -70,7 +70,7 @@ const LightboxModal = ({
           {content.map(({ description, id, legacySrc, sources = [] }) => (
             <SwiperSlide key={id} className={styles.slide}>
               <Picture
-                className={styles.images}
+                className={styles.image}
                 src={legacySrc}
                 alt={description}
                 sources={sources}
