@@ -1,327 +1,151 @@
-import Gallery, { Content } from "../components/Gallery";
-
-import angelaLegacy from "../content/illustration/angela.png";
-import angelaWebP from "../content/illustration/angela.webp";
-import angelaAvif from "../content/illustration/angela.avif";
-
-import birdHouseLegacy from "../content/illustration/bird-house.png";
-import birdHouseWebP from "../content/illustration/bird-house.webp";
-import birdHouseAvif from "../content/illustration/bird-house.avif";
-
-import cheersLegacy from "../content/illustration/cheers.jpg";
-import cheersWebP from "../content/illustration/cheers.webp";
-import cheersAvif from "../content/illustration/cheers.avif";
-
-import chemexFlowerLegacy from "../content/illustration/chemex-flower.jpg";
-import chemexFlowerWebP from "../content/illustration/chemex-flower.webp";
-import chemexFlowerAvif from "../content/illustration/chemex-flower.avif";
-
-import cocktailLegacy from "../content/illustration/cocktail.png";
-import cocktailWebP from "../content/illustration/cocktail.webp";
-import cocktailAvif from "../content/illustration/cocktail.avif";
-
-import coffeeSwimLegacy from "../content/illustration/coffee-swim.jpg";
-import coffeeSwimWebP from "../content/illustration/coffee-swim.webp";
-import coffeeSwimAvif from "../content/illustration/coffee-swim.avif";
-
-import drinksLegacy from "../content/illustration/drinks.png";
-import drinksWebP from "../content/illustration/drinks.webp";
-import drinksAvif from "../content/illustration/drinks.avif";
-
-import fourCubePeopleLegacy from "../content/illustration/four-cube-people.png";
-import fourCubePeopleWebP from "../content/illustration/four-cube-people.webp";
-import fourCubePeopleAvif from "../content/illustration/four-cube-people.avif";
-
-import goofyGuyLegacy from "../content/illustration/goofy-guy.jpg";
-import goofyGuyAvif from "../content/illustration/goofy-guy.avif";
-
-import hannahLegacy from "../content/illustration/hannah.jpg";
-import hannahWebP from "../content/illustration/hannah.webp";
-import hannahAvif from "../content/illustration/hannah.avif";
-
-import laptopCoffeeBookLegacy from "../content/illustration/laptop-coffee-book.jpg";
-import laptopCoffeeBookWebP from "../content/illustration/laptop-coffee-book.webp";
-import laptopCoffeeBookAvif from "../content/illustration/laptop-coffee-book.avif";
-
-import larryCircleLegacy from "../content/illustration/larry-circle.jpg";
-import larryCircleWebP from "../content/illustration/larry-circle.webp";
-import larryCircleAvif from "../content/illustration/larry-circle.avif";
-
-import larryProfileLegacy from "../content/illustration/larry-profile.png";
-import larryProfileWebP from "../content/illustration/larry-profile.webp";
-import larryProfileAvif from "../content/illustration/larry-profile.avif";
-
-import redHeadStudentLegacy from "../content/illustration/red-head-student.jpg";
-import redHeadStudentWebP from "../content/illustration/red-head-student.webp";
-import redHeadStudentAvif from "../content/illustration/red-head-student.avif";
-
-import sadWomanLegacy from "../content/illustration/sad-woman.png";
-import sadWomanWebP from "../content/illustration/sad-woman.webp";
-import sadWomanAvif from "../content/illustration/sad-woman.avif";
-
-import sabrinaLegacy from "../content/illustration/sabrina.jpg";
-import sabrinaWebP from "../content/illustration/sabrina.webp";
-import sabrinaAvif from "../content/illustration/sabrina.avif";
-
-import sicquanBandLegacy from "../content/illustration/sicquan-band.jpg";
-import sicquanBandWebP from "../content/illustration/sicquan-band.webp";
-import sicquanBandAvif from "../content/illustration/sicquan-band.avif";
-
-import stuckLegacy from "../content/illustration/stuck.png";
-import stuckWebP from "../content/illustration/stuck.webp";
-import stuckAvif from "../content/illustration/stuck.avif";
-
-import weirdGuyLegacy from "../content/illustration/weird-guy.jpg";
-import weirdGuyWebP from "../content/illustration/weird-guy.webp";
-import weirdGuyAvif from "../content/illustration/weird-guy.avif";
-
-import robotLegacy from "../content/illustration/robot.png";
-import robotWebP from "../content/illustration/robot.webp";
-import robotAvif from "../content/illustration/robot.avif";
-
-import selfPortraitLegacy from "../content/illustration/self-portrait.png";
-import selfPortraitWebP from "../content/illustration/self-portrait.webp";
-import selfPortraitAvif from "../content/illustration/self-portrait.avif";
-
-import boyWithBalloonLegacy from "../content/illustration/boy-with-balloon.jpg";
-import boyWithBalloonWebP from "../content/illustration/boy-with-balloon.webp";
-import boyWithBalloonAvif from "../content/illustration/boy-with-balloon.avif";
-
-import lighthouseLegacy from "../content/illustration/lighthouse.jpg";
-import lighthouseWebP from "../content/illustration/lighthouse.webp";
-import lighthouseAvif from "../content/illustration/lighthouse.avif";
-
-import manInBoatLegacy from "../content/illustration/man-in-boat.jpg";
-import manInBoatWebP from "../content/illustration/man-in-boat.webp";
-import manInBoatAvif from "../content/illustration/man-in-boat.avif";
+import Gallery, { Content, Source } from "../components/Gallery";
+import { images } from "../content/illustration";
 
 const content: Content[] = [
   {
-    legacySrc: coffeeSwimLegacy,
-    sources: [
-      {
-        id: "avif",
-        type: "image/avif",
-        src: coffeeSwimAvif,
-      },
-      {
-        id: "webp",
-        type: "image/webp",
-        src: coffeeSwimWebP,
-      },
-    ],
+    legacyType: "jpg",
     id: "coffee-swim",
     description: "Coffee Swim",
   },
   {
-    legacySrc: birdHouseLegacy,
-    sources: [
-      { id: "avif", type: "image/avif", src: birdHouseAvif },
-      { id: "webp", type: "image/webp", src: birdHouseWebP },
-    ],
+    legacyType: "png",
     id: "bird-house",
     description: "Bird House",
   },
   {
-    legacySrc: chemexFlowerLegacy,
-    sources: [
-      { id: "avif", type: "image/avif", src: chemexFlowerAvif },
-      { id: "webp", type: "image/webp", src: chemexFlowerWebP },
-    ],
+    legacyType: "jpg",
     id: "chemex-flower",
     description: "Chemex Flower",
   },
   {
-    legacySrc: cheersLegacy,
-    sources: [
-      { id: "avif", type: "image/avif", src: cheersAvif },
-      { id: "webp", type: "image/webp", src: cheersWebP },
-    ],
+    legacyType: "jpg",
     id: "cheers",
     description: "Cheers",
   },
   {
-    legacySrc: weirdGuyLegacy,
-    sources: [
-      { id: "avif", type: "image/avif", src: weirdGuyAvif },
-      { id: "webp", type: "image/webp", src: weirdGuyWebP },
-    ],
+    legacyType: "jpg",
     id: "weird-guy",
     description: "Weird Guy",
   },
   {
-    legacySrc: redHeadStudentLegacy,
-    sources: [
-      { id: "avif", type: "image/avif", src: redHeadStudentAvif },
-      { id: "webp", type: "image/webp", src: redHeadStudentWebP },
-    ],
+    legacyType: "jpg",
     id: "red-head-student",
     description: "Red Head Student",
   },
   {
-    legacySrc: laptopCoffeeBookLegacy,
-    sources: [
-      { id: "avif", type: "image/avif", src: laptopCoffeeBookAvif },
-      { id: "webp", type: "image/webp", src: laptopCoffeeBookWebP },
-    ],
+    legacyType: "jpg",
     id: "laptop-coffee-book",
     description: "Laptop Coffee Book",
   },
   {
-    legacySrc: fourCubePeopleLegacy,
-    sources: [
-      { id: "avif", type: "image/avif", src: fourCubePeopleAvif },
-      { id: "webp", type: "image/webp", src: fourCubePeopleWebP },
-    ],
+    legacyType: "png",
     id: "four-cube-people",
     description: "Four Cube People",
   },
   {
-    legacySrc: hannahLegacy,
-    sources: [
-      { id: "avif", type: "image/avif", src: hannahAvif },
-      { id: "webp", type: "image/webp", src: hannahWebP },
-    ],
+    legacyType: "jpg",
     id: "hannah",
     description: "Hannah",
   },
   {
-    legacySrc: goofyGuyLegacy,
-    sources: [{ id: "avif", type: "image/avif", src: goofyGuyAvif }],
+    legacyType: "jpg",
     id: "goofy-guy",
     description: "Goofy Guy",
   },
   {
-    legacySrc: larryCircleLegacy,
-    sources: [
-      { id: "avif", type: "image/avif", src: larryCircleAvif },
-      { id: "webp", type: "image/webp", src: larryCircleWebP },
-    ],
+    legacyType: "jpg",
     id: "larry-circle",
     description: "Larry Circle",
   },
   {
-    legacySrc: sabrinaLegacy,
-    sources: [
-      { id: "avif", type: "image/avif", src: sabrinaAvif },
-      { id: "webp", type: "image/webp", src: sabrinaWebP },
-    ],
+    legacyType: "jpg",
     id: "sabrina",
     description: "Sabrina",
   },
   {
-    legacySrc: boyWithBalloonLegacy,
+    legacyType: "jpg",
     description: "Boy with balloon",
     id: "boy-with-balloon",
-    sources: [
-      { id: "webp", type: "image/webp", src: boyWithBalloonWebP },
-      { id: "avif", type: "image/avif", src: boyWithBalloonAvif },
-    ],
   },
   {
-    legacySrc: lighthouseLegacy,
+    legacyType: "jpg",
     description: "lighthouse",
     id: "lighthouse",
-    sources: [
-      { id: "avif", type: "image/avif", src: lighthouseAvif },
-      { id: "webp", type: "image/webp", src: lighthouseWebP },
-    ],
   },
   {
-    legacySrc: manInBoatLegacy,
+    legacyType: "jpg",
     description: "Man in boat",
     id: "man-in-boat",
-    sources: [
-      { id: "avif", type: "image/avif", src: manInBoatAvif },
-      { id: "webp", type: "image/webp", src: manInBoatWebP },
-    ],
   },
   {
-    legacySrc: sicquanBandLegacy,
-    sources: [
-      { id: "avif", type: "image/avif", src: sicquanBandAvif },
-      { id: "webp", type: "image/webp", src: sicquanBandWebP },
-    ],
+    legacyType: "jpg",
     id: "sicquan-band",
     description: "Sicquan Band",
   },
   {
-    legacySrc: drinksLegacy,
-    sources: [
-      { id: "avif", type: "image/avif", src: drinksAvif },
-      { id: "webp", type: "image/webp", src: drinksWebP },
-    ],
+    legacyType: "png",
     id: "drinks",
     description: "Drinks",
   },
   {
-    legacySrc: cocktailLegacy,
-    sources: [
-      { id: "avif", type: "image/avif", src: cocktailAvif },
-      { id: "webp", type: "image/webp", src: cocktailWebP },
-    ],
+    legacyType: "png",
     id: "cocktail",
     description: "Cocktail",
   },
   {
-    legacySrc: larryProfileLegacy,
-    sources: [
-      { id: "avif", type: "image/avif", src: larryProfileAvif },
-      { id: "webp", type: "image/webp", src: larryProfileWebP },
-    ],
+    legacyType: "png",
     id: "larry-profile",
     description: "Larry Profile",
   },
   {
-    legacySrc: sadWomanLegacy,
-    sources: [
-      { id: "avif", type: "image/avif", src: sadWomanAvif },
-      { id: "webp", type: "image/webp", src: sadWomanWebP },
-    ],
-    id: "saw-woman",
+    legacyType: "png",
+    id: "sad-woman",
     description: "Sad Woman",
   },
   {
-    legacySrc: robotLegacy,
-    sources: [
-      { id: "avif", type: "image/avif", src: robotAvif },
-      { id: "webp", type: "image/webp", src: robotWebP },
-    ],
+    legacyType: "png",
     id: "robot",
     description: "Robot",
   },
   {
-    legacySrc: selfPortraitLegacy,
-    sources: [
-      { id: "avif", type: "image/avif", src: selfPortraitAvif },
-      { id: "webp", type: "image/webp", src: selfPortraitWebP },
-    ],
+    legacyType: "png",
     id: "self-portrait",
     description: "Self Portrait",
   },
   {
-    legacySrc: angelaLegacy,
-    sources: [
-      { id: "avif", type: "image/avif", src: angelaAvif },
-      {
-        id: "webp",
-        type: "image/webp",
-        src: angelaWebP,
-      },
-    ],
+    legacyType: "png",
     id: "angela",
     description: "Angela",
   },
   {
-    legacySrc: stuckLegacy,
-    sources: [
-      { id: "avif", type: "image/avif", src: stuckAvif },
-      { id: "webp", type: "image/webp", src: stuckWebP },
-    ],
+    legacyType: "png",
     id: "stuck",
     description: "Stuck",
   },
-];
+]
+  .map((content) => {
+    try {
+      return {
+        ...content,
+        sources: Object.entries(images[content.id]).flatMap(([fileType, b]) =>
+          Object.entries(b).flatMap(
+            ([width, file]): Source => ({
+              id: file,
+              src: `${process.env.PUBLIC_URL}/illustration/optimized/${file}`,
+              type: `image/${fileType}`,
+              width: parseInt(width),
+            })
+          )
+        ),
+      };
+    } catch (error) {
+      return content;
+    }
+  })
+  .map((content) => ({
+    ...content,
+    legacySrc: `${process.env.PUBLIC_URL}/illustration/${content.id}.${content.legacyType}`,
+  }));
 
 const IllustrationGallery = () => <Gallery content={content} />;
 
