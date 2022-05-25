@@ -35,7 +35,14 @@ const Picture = ({
             }
           })
           .join(", ");
-        return <source key={sourceType} type={sourceType} srcSet={srcSet} />;
+        return (
+          <source
+            key={sourceType}
+            type={sourceType}
+            srcSet={srcSet}
+            sizes="100vw"
+          />
+        );
       })}
       <img alt={alt} {...otherProps} />
     </picture>
