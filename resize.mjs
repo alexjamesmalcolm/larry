@@ -2,7 +2,7 @@ import sharp from "sharp";
 import fs from "fs/promises";
 
 const getAllWidths = (width) => {
-  const limit = 500;
+  const limit = 250;
   const firstTry = width - (width % limit);
   if (firstTry === 0) {
     return [width];
