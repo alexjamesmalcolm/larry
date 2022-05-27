@@ -33,11 +33,11 @@ const App = () => {
                 Graphic Design
               </NavLink>
             </li>
-            <li id={styles.about}>
-              {/* <NavLink to="about" className={navLinkClassName}>
+            {/* <li id={styles.about}>
+              <NavLink to="about" className={navLinkClassName}>
                 About
-              </NavLink> */}
-            </li>
+              </NavLink>
+            </li> */}
             <li id={styles.instagram}>
               <a
                 href="https://www.instagram.com/larry.mitchell/"
