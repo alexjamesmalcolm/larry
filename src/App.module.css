@@ -109,6 +109,8 @@
   .header {
     grid-template-columns: max-content auto max-content max-content;
     justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
   }
   #larryMitchell {
     grid-column: 1;
