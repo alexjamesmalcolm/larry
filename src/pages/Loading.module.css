@@ -8,8 +8,7 @@
   justify-self: center;
   align-self: center;
   width: 50px;
-  animation: infinite 1s rotate;
-  transform-origin: center 47.5%;
+  animation: infinite 800ms rotate ease;
 }
 
 @keyframes rotate {
