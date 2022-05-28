@@ -60,7 +60,7 @@ const App = () => {
                 rel="noreferrer"
                 className={styles.link}
               >
-                <img src={linkedin} alt="LinkedIn" width="20px" height="20px" />
+                <img src={linkedin} alt="LinkedIn" width="24px" height="24px" />
               </a>
             </li>
           </ul>
