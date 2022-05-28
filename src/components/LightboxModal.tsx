@@ -74,6 +74,7 @@ const LightboxModal = ({
                 src={legacySrc}
                 alt={description}
                 sources={sources}
+                sizes="300vw"
               />
             </SwiperSlide>
           ))}
