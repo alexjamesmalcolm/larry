@@ -5,9 +5,9 @@ import { lazy, Suspense, useCallback } from "react";
 import instagram from "./images/instagram.svg";
 import linkedin from "./images/linkedin.svg";
 import Loading from "./pages/Loading";
+import IllustrationGallery from "./pages/IllustrationGallery";
 
 const GraphicDesignGallery = lazy(() => import("./pages/GraphicDesignGallery"));
-const IllustrationGallery = lazy(() => import("./pages/IllustrationGallery"));
 const About = lazy(() => import("./pages/About"));
 
 const App = () => {
@@ -68,14 +68,7 @@ const App = () => {
       </header>
       <main className={styles.main}>
         <Routes>
-          <Route
-            index
-            element={
-              <Suspense fallback={<Loading />}>
-                <IllustrationGallery />
-              </Suspense>
-            }
-          />
+          <Route index element={<IllustrationGallery />} />
           <Route
             path="/graphic-design"
             element={
