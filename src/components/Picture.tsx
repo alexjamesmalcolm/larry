@@ -6,6 +6,7 @@ type CondensedSources = Record<Source["type"], Source[]>;
 const Picture = ({
   sources,
   alt,
+  sizes = "100vw",
   ...otherProps
 }: { sources: Source[] } & ImgHTMLAttributes<HTMLImageElement>) => {
   const condensedSources = useMemo<CondensedSources>(
@@ -40,7 +41,7 @@ const Picture = ({
             key={sourceType}
             type={sourceType}
             srcSet={srcSet}
-            sizes="100vw"
+            sizes={sizes}
           />
         );
       })}

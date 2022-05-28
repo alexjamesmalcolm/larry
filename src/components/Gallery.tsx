@@ -39,6 +39,7 @@ const Gallery = ({ content }: { content: Content[] }) => {
               src={legacySrc}
               alt={description}
               width="400px"
+              sizes="400px"
               height="300px"
               loading={index > 1 ? "lazy" : "eager"}
             />
