@@ -148,3 +148,79 @@
     gap: 0 0.5rem;
   }
 }
+
+@media (max-width: 305px) {
+  .header {
+    width: auto;
+    justify-content: space-around;
+    grid-template-columns: unset;
+    gap: 0;
+  }
+  #larryMitchell {
+    grid-column: span 2;
+    grid-row: 1;
+  }
+  #illustrations {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  #graphicDesign {
+    grid-row: 2;
+    grid-column: span 1;
+  }
+  #about {
+    grid-row: 2;
+  }
+  #instagram {
+    grid-row: 1;
+    grid-column: 3;
+  }
+  #linkedin {
+    grid-row: 1;
+    grid-column: 4;
+  }
+}
+
+@media (max-width: 270px) {
+  #graphicDesign {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 245px) {
+  #graphicDesign {
+    grid-column: span 3;
+  }
+}
+
+@media (max-width: 195px) {
+  .header {
+    grid-template-columns: 24px max-content;
+    justify-content: unset;
+    gap: 0.5rem 0.5rem;
+    width: 100vw;
+  }
+  #larryMitchell {
+    grid-column: span 2;
+    grid-row: 1;
+  }
+  #illustrations {
+    grid-column: span 2;
+    grid-row: 2;
+  }
+  #graphicDesign {
+    grid-row: 3;
+    grid-column: span 2;
+  }
+  #about {
+    grid-row: 2;
+  }
+  #instagram {
+    grid-row: 4;
+    grid-column: 1;
+  }
+  #linkedin {
+    grid-row: 4;
+    grid-column: 2;
+  }
+}
