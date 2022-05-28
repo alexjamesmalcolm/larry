@@ -1,5 +1,6 @@
 import sharp from "sharp";
 import fs from "fs/promises";
+import { MultiBar } from "cli-progress";
 
 const getAllWidths = (width) => {
   const limit = 200;
@@ -22,7 +23,13 @@ const main = async () => {
   const folderPaths = ["public/illustration", "public/graphic-design"];
 
   for await (const folderPath of folderPaths) {
-    console.log(`Processing directory ${folderPath}`);
+    // console.log(`Processing directory ${folderPath}`);
+    const progress = new MultiBar({
+      hideCursor: true,
+      clearOnComplete: false,
+      autopadding: true,
+      format: "[{bar}] {percentage}% | {value}/{total} | {imageName}",
+    });
     const directory = await fs.opendir(folderPath);
     const optimizedDirectoryPath = `${folderPath}/optimized`;
     let isOptimizedPresent = false;
@@ -44,28 +51,30 @@ const main = async () => {
           image.name.endsWith(imageType)
         )
       ) {
-        console.log(`Processing ${image.name}`);
         const loadImage = () => sharp(`${folderPath}/${image.name}`);
 
         const metadata = await loadImage().metadata();
 
-        for await (const type of ["avif", "webp"]) {
-          const allWidths = getAllWidths(metadata.width).filter(
-            (width) => width <= 4000
-          );
+        const allWidths = getAllWidths(metadata.width)
+          .filter((width) => width <= 4000)
+          .sort((a, b) => a - b);
+
+        const types = ["webp", "avif"];
+
+        const bar = progress.create(allWidths.length * types.length, 0);
+        bar.update({ imageName: image.name.split(".")[0] });
+
+        for await (const type of types) {
           for await (const width of allWidths) {
             const optimizedImageName = `${
               image.name.split(".")[0]
             }-${width}w.${type}`;
             const optimizedImagePath = `${optimizedDirectoryPath}/${optimizedImageName}`;
-            console.log(`Creating ${optimizedImageName} from ${image.name}`);
             loadImage()
               .resize({ width, fit: "inside" })
               .toFile(optimizedImagePath)
               .finally(() => {
-                console.log(
-                  `Finished creating ${optimizedImageName} from ${image.name}`
-                );
+                bar.increment();
               });
           }
         }
