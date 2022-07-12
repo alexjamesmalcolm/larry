@@ -11,6 +11,7 @@
 }
 
 .closeButton {
+  cursor: pointer;
   position: fixed;
   z-index: 2;
   border-radius: 50%;
